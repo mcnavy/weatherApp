@@ -1,6 +1,6 @@
 import React from 'react';
 import Weather from './Weather'
-import "./App.css"
+import "../App/App.css"
 import {pending,errorW,success,deleteCity} from "../../store/actions";
 import {connect} from 'react-redux';
 import axios from "axios"
@@ -28,7 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
 
     deleteCity: id=> dispatch(deleteCity(id))
 });
-class Weather2 extends React.Component{
+class FavoriteWeather extends React.Component{
     render(){
         return(
             <div className="Weather2">
@@ -39,5 +39,5 @@ class Weather2 extends React.Component{
         )
     }
 }
-const ManyWeather = connect(mapStateToProps,mapDispatchToProps)(Weather2);
-export default ManyWeather;
+const FavoriteWeatherList = connect(mapStateToProps,mapDispatchToProps)(FavoriteWeather);
+export default FavoriteWeatherList;

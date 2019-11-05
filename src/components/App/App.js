@@ -1,13 +1,15 @@
 import './App.css'
+import '../Weather/Weather.css'
+import '../City/AddCity.css'
 import React from 'react';
 import axios from 'axios';
 import {success,errorW,pending} from "../../store/actions";
 import {connect} from 'react-redux';
-import AddCityForm from "../AddCity";
+import AddCityForm from "../City/AddCity";
 import {DEFAULT_COORDS} from "../../store/constants";
 import {getCurrentCity} from "../../store/reducers";
-import Weather from "./Weather";
-import ManyWeather from "./Weather2";
+import Weather from "../Weather/Weather";
+import FavoriteWeatherList from "../Weather/FavoriteWeather";
 
 const findWeatherApiCall = (dispatch,coords,id) =>{
     axios
@@ -55,7 +57,7 @@ class App extends React.Component {
                         <h2>Favorites</h2>
                         <AddCityForm/>
                     </div>
-                    <ManyWeather/>
+                    <FavoriteWeatherList/>
 
                 </div>
             </div>

@@ -15,38 +15,18 @@
   flex-direction: column;
 
 }
+
 .mainInfo{
     display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 .topInfo{
     font-size:2em;
     padding:5px;
     display: flex;
 }
-.Weather2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.topInfo >div{
-    margin:5px;
-}
-.favorites{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  box-sizing: border-box;
-}
-.weatherHere {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-}
+
+
+
 
 
 
@@ -56,10 +36,4 @@ h2 {
   font-weight: normal;
   text-align: left;
 }
-#addCity{
 
-  font-size: 18px;
-  padding: 8px;
-  border-radius: 8px;
-  border: 2px  inset;
-}

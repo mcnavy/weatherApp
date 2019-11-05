@@ -1,6 +1,6 @@
 import React from 'react';
-import {addCity} from "../store/actions";
-import {getCities, getNextCityId} from "../store/reducers/index";
+import {addCity} from "../../store/actions";
+import {getCities, getNextCityId} from "../../store/reducers";
 import {connect} from "react-redux";
 
 class AddCity extends React.Component {

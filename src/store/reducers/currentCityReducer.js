@@ -1,4 +1,4 @@
-import {ADD_CITY, DELETE_CITY, INITIAL_STATE, PENDINGW,SUCCESSW,ERRORW} from "../constants";
+import {INITIAL_STATE, PENDINGW,SUCCESSW,ERRORW} from "../constants";
 const currentCityReducer = (state = INITIAL_STATE.current, action = {}) => {
     if (action.id !== 0) {
         return state;

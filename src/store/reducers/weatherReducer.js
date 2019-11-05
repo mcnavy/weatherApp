@@ -43,7 +43,7 @@ const weatherReducer = (state = INITIAL_STATE.weatherList, action = {}) => {
                     id: state.next,
                     name: action.name
                 }
-            ]
+            ];
             return {
                 ...state,
                 next: state.next +1,

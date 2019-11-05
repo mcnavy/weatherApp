@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"
+import "../App/App.css"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
 
@@ -8,7 +8,7 @@ class Weather extends React.Component{
     componentDidMount() {
         this.props.findWeatherApiCall();
     }
-
+ё
     render(){
 
         console.warn(this.props.data.pending)
@@ -59,3 +59,7 @@ class Weather extends React.Component{
     }
 }
 export default Weather;
+// ne dobalyat` v local error
+// push when add, pop when id
+//razbit` css i papk
+//export same name from comp
