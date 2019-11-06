@@ -37,16 +37,17 @@ const weatherReducer = (state = INITIAL_STATE.weatherList, action = {}) => {
             };
 
         case ADD_CITY:
+
             changedCities = [
                 ...state.cities,
                 {
-                    id: state.next,
+                    id: state.cities ? state.cities.length+1 : 1,
                     name: action.name
                 }
             ];
             return {
                 ...state,
-                next: state.next +1,
+
                 cities: changedCities
             };
 

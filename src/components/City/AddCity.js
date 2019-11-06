@@ -1,6 +1,6 @@
 import React from 'react';
 import {addCity} from "../../store/actions";
-import {getCities, getNextCityId} from "../../store/reducers";
+import {getCities} from "../../store/reducers";
 import {connect} from "react-redux";
 
 class AddCity extends React.Component {
@@ -22,6 +22,7 @@ class AddCity extends React.Component {
         if(flag) {
             this.props.addCity(event.target[0].value);
         }
+        event.target[0].value = '';
 
     };
     render() {
@@ -40,7 +41,6 @@ class AddCity extends React.Component {
     }
 }
 const mapStateToProps = state => ({
-    next: getNextCityId(state),
     cities: getCities(state)
 });
 const mapDispatchToProps = dispatch =>({

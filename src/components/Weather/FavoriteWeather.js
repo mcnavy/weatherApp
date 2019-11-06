@@ -4,7 +4,7 @@ import "../App/App.css"
 import {pending,errorW,success,deleteCity} from "../../store/actions";
 import {connect} from 'react-redux';
 import axios from "axios"
-import {getCities, getNextCityId} from "../../store/reducers/index.js";
+import {getCities} from "../../store/reducers/index.js";
 export const getWeatherByName = (id,cityName) => {
     return dispatch =>{
         dispatch(pending(id));
@@ -20,7 +20,7 @@ export const getWeatherByName = (id,cityName) => {
 };
 const mapStateToProps =(state) =>({
     cities:getCities(state),
-    next:getNextCityId(state)
+
 
 });
 const mapDispatchToProps = (dispatch) => ({

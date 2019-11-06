@@ -5,9 +5,10 @@ export const PENDINGW = 'PENDINGW';
 export const SUCCESSW = 'SUCCESSW';
 export const ERRORW = 'ERRORW';
 export const INITIAL_STATE = {
+
     'weatherList':{
         'cities':[],
-        'next': 1,
+
     },
     'current':{
         'id':0

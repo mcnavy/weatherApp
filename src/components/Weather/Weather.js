@@ -8,7 +8,7 @@ class Weather extends React.Component{
     componentDidMount() {
         this.props.findWeatherApiCall();
     }
-ё
+
     render(){
 
         console.warn(this.props.data.pending)
@@ -48,7 +48,7 @@ class Weather extends React.Component{
                             color="#00BFFF"
                             height={100}
                             width={100}
-                            timeout={3000} //3 secs
+                            timeout={30000} //30 secs
 
                         />
 
@@ -59,7 +59,3 @@ class Weather extends React.Component{
     }
 }
 export default Weather;
-// ne dobalyat` v local error
-// push when add, pop when id
-//razbit` css i papk
-//export same name from comp

@@ -3,7 +3,7 @@ import weatherReducer from "./weatherReducer";
 import {combineReducers} from "redux";
 
 export const getCities = state => state.weatherList.cities;
-export const getNextCityId = state => state.weatherList.next;
+
 export const getCurrentCity = state => state.current;
 export default combineReducers({
     weatherList: weatherReducer,
