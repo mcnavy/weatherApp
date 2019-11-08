@@ -11,14 +11,14 @@ import thunk from "redux-thunk";
 import {applyMiddleware,createStore} from "redux";
 import {Provider} from "react-redux";
 
-const next = localStorage['training'] ? JSON.parse(localStorage['training'])['next']:1;
+
 const cities = localStorage['training'] ? JSON.parse(localStorage['training'])['cities']:[];
 const state ={
     ...INITIAL_STATE,
     weatherList:{
         ...INITIAL_STATE.weatherList,
         cities,
-        next
+
     }
 };
 const store  = createStore(rootReducer,state,applyMiddleware(thunk));
@@ -33,6 +33,6 @@ render(
 store.subscribe(() =>{
     localStorage.setItem('training',JSON.stringify({
         'cities':store.getState().weatherList.cities.map(city =>({id:city.id,name:city.name})),
-        'next':store.getState().weatherList.next
+
     }));
 });
