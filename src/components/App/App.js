@@ -73,4 +73,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+const AppC =  connect(mapStateToProps, mapDispatchToProps)(App);
+
+export {AppC, App};
