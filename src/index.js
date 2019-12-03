@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from "react-dom";
 import './index.css';
-import App from './components/App/App';
+import {AppC} from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import {INITIAL_STATE} from "./store/constants";
 import rootReducer from './store/reducers/index'
@@ -24,15 +24,13 @@ const state ={
 const store  = createStore(rootReducer,state,applyMiddleware(thunk));
 render(
         <Provider store ={store}>
-            <App/>
+            <AppC/>
         </Provider>,
     document.getElementById("root")
 
 );
 
 store.subscribe(() =>{
-    localStorage.setItem('training',JSON.stringify({
-        'cities':store.getState().weatherList.cities.map(city =>({id:city.id,name:city.name})),
-
-    }));
+    localStorage.setItem('training',JSON.stringify({'cities':store.getState().weatherList.cities.map(city =>({id:city.id,name:city.name})),}));
+    //localStorage['redux-store'] = JSON.stringify(store.getState().weatherList.cities.map)
 });
